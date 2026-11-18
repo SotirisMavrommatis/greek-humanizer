@@ -1,5 +1,7 @@
 # greek-humanizer
 
+[![tests](https://github.com/SotirisMavrommatis/greek-humanizer/actions/workflows/tests.yml/badge.svg)](https://github.com/SotirisMavrommatis/greek-humanizer/actions/workflows/tests.yml)
+
 Agent skill που αφαιρεί από **ελληνικά** κείμενα τα σημάδια ότι τα έγραψε AI και τα ξαναγράφει ώστε να διαβάζονται φυσικά, χωρίς να αλλάζει τα γεγονότα.
 
 Τα γνωστά humanizer skills (π.χ. [blader/humanizer](https://github.com/blader/humanizer)) είναι φτιαγμένα για αγγλικά. Τα ελληνικά κείμενα από AI έχουν δικά τους σημάδια:
@@ -13,7 +15,13 @@ Agent skill που αφαιρεί από **ελληνικά** κείμενα τ�
 
 ## Εγκατάσταση
 
-**Claude Code**
+**Claude Code (plugin)**
+```
+/plugin marketplace add SotirisMavrommatis/greek-humanizer
+/plugin install greek-humanizer@greek-humanizer
+```
+
+**Claude Code (χειροκίνητα)**
 ```bash
 git clone https://github.com/SotirisMavrommatis/greek-humanizer.git
 cp -r greek-humanizer/skills/greek-humanizer ~/.claude/skills/
@@ -59,7 +67,7 @@ python3 skills/greek-humanizer/scripts/check.py πριν.txt μετά.txt    # �
 python3 tests/run.py
 ```
 
-Ο φάκελος [`tests/corpus`](tests/corpus) έχει 23 ζεύγη πριν/μετά σε 20+ είδη κειμένου: έκθεση, αίτηση εργασίας, κριτική προϊόντος, εργαστηριακή αναφορά, Instagram, παράπονο, tech blog, ιστορία, απάντηση chatbot, motivation letter, εξήγηση αναδρομής, συμβουλές, ταινία, ξενοδοχείο, email σε συνάδελφο, LinkedIn, έκθεση ιδεών, README, απάντηση σε forum, περίληψη διπλωματικής, e-shop, μήνυμα Viber, και ένα κείμενο γραμμένο από άνθρωπο ως control. Τα αποτελέσματα και τι άλλαξε σε κάθε γύρο είναι στο [`tests/RESULTS.md`](tests/RESULTS.md).
+Ο φάκελος [`tests/corpus`](tests/corpus) έχει 24 ζεύγη πριν/μετά σε 20+ είδη κειμένου: έκθεση, αίτηση εργασίας, κριτική προϊόντος, εργαστηριακή αναφορά, Instagram, παράπονο, tech blog, ιστορία, απάντηση chatbot, motivation letter, εξήγηση αναδρομής, συμβουλές, ταινία, ξενοδοχείο, email σε συνάδελφο, LinkedIn, έκθεση ιδεών, README, απάντηση σε forum, περίληψη διπλωματικής, e-shop, μήνυμα Viber, μεγάλη εργασία ~500 λέξεων, και ένα κείμενο γραμμένο από άνθρωπο. Το `tests/controls` έχει ανθρώπινα κείμενα που ο έλεγχος πρέπει να βαθμολογεί χαμηλά. Το GitHub Action τρέχει τα τεστ σε κάθε αλλαγή και αποτυγχάνει αν μείνουν μοτίβα, αν προστεθούν αριθμοί, ή αν αλλάξει κείμενο που δεν είχε κανένα μοτίβο. Τα αποτελέσματα και τι άλλαξε σε κάθε γύρο είναι στο [`tests/RESULTS.md`](tests/RESULTS.md).
 
 ## Για τους AI detectors
 

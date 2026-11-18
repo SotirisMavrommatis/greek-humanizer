@@ -1,0 +1,12 @@
+{
+  "name": "greek-humanizer",
+  "owner": { "name": "Sotiris Mavrommatis", "url": "https://github.com/SotirisMavrommatis" },
+  "plugins": [
+    {
+      "name": "greek-humanizer",
+      "source": "./",
+      "description": "Αφαιρεί τα σημάδια AI από ελληνικά κείμενα χωρίς να αλλάζει τα γεγονότα (Greek anti-slop humanizer).",
+      "version": "2.2.0"
+    }
+  ]
+}
