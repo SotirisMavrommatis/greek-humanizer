@@ -15,7 +15,7 @@ Agent skill που αφαιρεί από **ελληνικά** κείμενα τ�
 
 **Claude Code**
 ```bash
-git clone https://github.com/<user>/greek-humanizer.git
+git clone https://github.com/SotirisMavrommatis/greek-humanizer.git
 cp -r greek-humanizer/skills/greek-humanizer ~/.claude/skills/
 ```
 
