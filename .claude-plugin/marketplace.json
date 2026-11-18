@@ -6,7 +6,7 @@
       "name": "greek-humanizer",
       "source": "./",
       "description": "Αφαιρεί τα σημάδια AI από ελληνικά κείμενα χωρίς να αλλάζει τα γεγονότα (Greek anti-slop humanizer).",
-      "version": "2.4.0"
+      "version": "2.5.0"
     }
   ]
 }
