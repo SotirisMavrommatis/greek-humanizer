@@ -22,7 +22,8 @@ print(f"\n{len(rows)} texts | mean after {statistics.mean(d):.2f} | max after {m
 # ---- pass/fail thresholds (used by CI) ----
 fail = []
 for name, r, sim in rows:
-    if r['density_after'] > 1.5:
+    # a single leftover hit in a very short text inflates the density, so require at least 2
+    if r['density_after'] > 1.5 and r['tells_after'] >= 2:
         fail.append(f"{name}: {r['density_after']} tells/100w left (max 1.5)")
     if r['numbers_added']:
         fail.append(f"{name}: numbers added {r['numbers_added']}")
