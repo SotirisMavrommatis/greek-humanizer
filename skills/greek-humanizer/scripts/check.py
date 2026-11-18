@@ -86,8 +86,7 @@ def score(text):
         if len(re.findall(r"\b(ο|η|το|οι|τα|του|της|των|τον|την|τους|τις)\s+οποι\w+", norm(s))) >= 2:
             hits.append(("B", 1, "διπλό «ο οποίος»"))
     # F: typography
-    if re.search(r"[α-ωά-ώ]", text) and re.search(r"\"[^\"\n]{1,80}\"", text):
-        hits.append(("F", 1, 'αγγλικά εισαγωγικά ""'))
+    # (English "…" quotes are NOT counted: humans type them all the time in informal Greek)
     dashes = len(re.findall(r"\s—\s|\s–\s", text))
     if dashes:
         hits.append(("F", dashes, f"{dashes} μακριές παύλες"))

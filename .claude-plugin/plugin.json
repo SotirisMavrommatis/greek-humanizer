@@ -1,6 +1,6 @@
 {
   "name": "greek-humanizer",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "Αφαιρεί τα σημάδια AI από ελληνικά κείμενα χωρίς να αλλάζει τα γεγονότα (Greek anti-slop humanizer).",
   "author": { "name": "Sotiris Mavrommatis", "url": "https://github.com/SotirisMavrommatis" },
   "homepage": "https://github.com/SotirisMavrommatis/greek-humanizer",
